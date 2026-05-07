@@ -433,19 +433,17 @@ if (contactForm) {
         submitBtn.disabled = true;
         formSuccess.style.display = 'none';
         
-        // Prepare form data
-        const formData = new FormData(contactForm);
-        
+        // Submit to Formspree
         try {
-            // Send form data to PHP script
-            const response = await fetch('send_contact.php', {
+            const response = await fetch(contactForm.action, {
                 method: 'POST',
-                body: formData
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
             
-            const result = await response.json();
-            
-            if (result.success) {
+            if (response.ok) {
                 // Show success message
                 formSuccess.style.display = 'block';
                 contactForm.reset();
@@ -456,7 +454,7 @@ if (contactForm) {
                 }, 5000);
             } else {
                 // Show error message
-                alert(result.message || 'An error occurred. Please try again.');
+                alert('An error occurred. Please try again.');
             }
         } catch (error) {
             console.error('Error:', error);
