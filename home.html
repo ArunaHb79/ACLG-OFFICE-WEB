@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page of ACLG Hambantota. Learn about our mission, departments, and services. Committed to efficient governance and community development in Hambantota District.">
+    <meta name="keywords" content="ACLG Hambantota, Local Government Services, Government Departments, Hambantota Administration">
+    <title>Home - Assistant Commissioner of Local Government Office</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-landmark"></i>
+                <span>ACLG Hambantota</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-translate="nav.home">Home</a>
+                <a href="#about" class="nav-link" data-translate="nav.about">About Us</a>
+                <a href="#departments" class="nav-link" data-translate="nav.departments">Departments</a>
+                <a href="downloads.html" class="nav-link" data-translate="nav.downloads">Downloads</a>
+                <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+            </div>
+            <div class="language-selector-nav">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="si">සි</button>
+                <button class="lang-btn" data-lang="ta">த</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slideshow -->
+    <section id="home" class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active">
+                <img src="images/welcome.jpg" alt="Team of government employees in traditional attire standing together with welcoming namaste gesture in a modern office building with glass windows and natural lighting">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=1600" alt="Community Development">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600" alt="Administrative Excellence">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1444210971048-6130cf0c46cf?w=1600" alt="Infrastructure Development">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 data-translate="hero.title">Assistant Commissioner of Local Government Office</h1>
+            <h2 data-translate="hero.location">Hambantota District</h2>
+            <p data-translate="hero.tagline">Committed to efficient governance and community development</p>
+            <a href="#about" class="hero-btn" data-translate="hero.learnMore">Learn More</a>
+        </div>
+        <div class="slideshow-controls">
+            <button class="slide-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="slide-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slideshow-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="about.title">About Our Office</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-translate="about.text1">The Assistant Commissioner of Local Government Office in Hambantota plays a crucial role in overseeing and coordinating local government activities within the district. Our office ensures effective implementation of government policies and programs at the local level.</p>
+                    <p data-translate="about.text2">We are dedicated to promoting good governance, transparency, and accountability while serving the needs of local authorities and communities in Hambantota.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="about.feature1">Efficient Administration</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="about.feature2">Community Focus</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="about.feature3">Transparent Operations</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="about.feature4">Professional Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="departments">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="deptSection.title">Our Departments</h2>
+                <div class="underline"></div>
+                <p data-translate="deptSection.subtitle">Five specialized departments working together for excellence</p>
+            </div>
+            <div class="departments-grid">
+                <!-- Account Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 data-translate="departments.account">Account Department</h3>
+                    <p data-translate="deptCards.account.desc">Manages financial operations, budget planning, and ensures proper allocation and utilization of resources for local government projects.</p>
+                    <ul class="dept-services">
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.account.service1">Financial Management</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.account.service2">Budget Planning</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.account.service3">Audit Coordination</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.account.service4">Payment Processing</span></li>
+                    </ul>
+                    <a href="account.html" class="dept-link"><span data-translate="deptSection.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Establishment Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-translate="departments.establishment">Establishment Department</h3>
+                    <p data-translate="deptCards.establishment.desc">Handles human resource management, staff appointments, promotions, and administrative matters related to personnel.</p>
+                    <ul class="dept-services">
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.establishment.service1">HR Management</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.establishment.service2">Recruitment</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.establishment.service3">Staff Development</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.establishment.service4">Leave Administration</span></li>
+                    </ul>
+                    <a href="establishment.html" class="dept-link"><span data-translate="deptSection.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Development Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-translate="departments.development">Development Department</h3>
+                    <p data-translate="deptCards.development.desc">Oversees development projects, infrastructure planning, and implementation of local government development initiatives.</p>
+                    <ul class="dept-services">
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.development.service1">Project Planning</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.development.service2">Infrastructure Development</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.development.service3">Progress Monitoring</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.development.service4">Community Programs</span></li>
+                    </ul>
+                    <a href="development.html" class="dept-link"><span data-translate="deptSection.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Investigation Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 data-translate="departments.investigation">Investigation Department</h3>
+                    <p data-translate="deptCards.investigation.desc">Conducts inquiries, investigations into administrative matters, and ensures compliance with regulations and procedures.</p>
+                    <ul class="dept-services">
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.investigation.service1">Administrative Inquiries</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.investigation.service2">Compliance Monitoring</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.investigation.service3">Report Preparation</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.investigation.service4">Grievance Resolution</span></li>
+                    </ul>
+                    <a href="investigation.html" class="dept-link"><span data-translate="deptSection.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Engineering Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 data-translate="departments.engineering">Engineering Department</h3>
+                    <p data-translate="deptCards.engineering.desc">Manages technical infrastructure projects, construction oversight, and engineering consultancy for local government facilities.</p>
+                    <ul class="dept-services">
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.engineering.service1">Technical Planning</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.engineering.service2">Construction Supervision</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.engineering.service3">Infrastructure Maintenance</span></li>
+                        <li><i class="fas fa-angle-right"></i> <span data-translate="deptCards.engineering.service4">Engineering Consultancy</span></li>
+                    </ul>
+                    <a href="engineering.html" class="dept-link"><span data-translate="deptSection.viewDetails">View Details</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates Section -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="news.title">Latest News & Updates</h2>
+                <div class="underline"></div>
+                <p data-translate="news.subtitle">Stay informed about our latest announcements and activities</p>
+            </div>
+            <div class="news-grid">
+                <!-- News Item 1 -->
+                <div class="news-card">
+                    <div class="news-date">
+                        <span class="date-day">08</span>
+                        <span class="date-month">JAN</span>
+                        <span class="date-year">2026</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">
+                            <i class="fas fa-bullhorn"></i>
+                            <span data-translate="news.categories.announcement">Announcement</span>
+                        </div>
+                        <h3 data-translate="news.item1.title">Annual Budget Meeting Scheduled</h3>
+                        <p data-translate="news.item1.description">Important meeting regarding the 2026 annual budget allocation for local government projects will be held on January 15th.</p>
+                        <a href="#" class="news-link" data-translate="news.readMore">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="news-card">
+                    <div class="news-date">
+                        <span class="date-day">05</span>
+                        <span class="date-month">JAN</span>
+                        <span class="date-year">2026</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">
+                            <i class="fas fa-tools"></i>
+                            <span data-translate="news.categories.project">Project</span>
+                        </div>
+                        <h3 data-translate="news.item2.title">New Infrastructure Development Project</h3>
+                        <p data-translate="news.item2.description">Engineering department announces the commencement of road development project in the Hambantota district area.</p>
+                        <a href="#" class="news-link" data-translate="news.readMore">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="news-card">
+                    <div class="news-date">
+                        <span class="date-day">02</span>
+                        <span class="date-month">JAN</span>
+                        <span class="date-year">2026</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">
+                            <i class="fas fa-users"></i>
+                            <span data-translate="news.categories.event">Event</span>
+                        </div>
+                        <h3 data-translate="news.item3.title">Community Development Workshop</h3>
+                        <p data-translate="news.item3.description">The Development Department is organizing a community engagement workshop for local government representatives.</p>
+                        <a href="#" class="news-link" data-translate="news.readMore">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="news-card">
+                    <div class="news-date">
+                        <span class="date-day">28</span>
+                        <span class="date-month">DEC</span>
+                        <span class="date-year">2025</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">
+                            <i class="fas fa-file-alt"></i>
+                            <span data-translate="news.categories.notice">Notice</span>
+                        </div>
+                        <h3 data-translate="news.item4.title">Updated Guidelines Available</h3>
+                        <p data-translate="news.item4.description">New procedural guidelines and updated forms are now available in the Downloads section for all departments.</p>
+                        <a href="downloads.html" class="news-link" data-translate="news.readMore">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 5 -->
+                <div class="news-card">
+                    <div class="news-date">
+                        <span class="date-day">20</span>
+                        <span class="date-month">DEC</span>
+                        <span class="date-year">2025</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">
+                            <i class="fas fa-award"></i>
+                            <span data-translate="news.categories.achievement">Achievement</span>
+                        </div>
+                        <h3 data-translate="news.item5.title">Excellence Award Recognition</h3>
+                        <p data-translate="news.item5.description">ACLG Hambantota receives excellence award for outstanding performance in local government administration.</p>
+                        <a href="#" class="news-link" data-translate="news.readMore">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Item 6 -->
+                <div class="news-card">
+                    <div class="news-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">DEC</span>
+                        <span class="date-year">2025</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">
+                            <i class="fas fa-briefcase"></i>
+                            <span data-translate="news.categories.recruitment">Recruitment</span>
+                        </div>
+                        <h3 data-translate="news.item6.title">Job Vacancies Announced</h3>
+                        <p data-translate="news.item6.description">Establishment Department announces new job vacancies for various positions. Application deadline is January 30th.</p>
+                        <a href="#" class="news-link" data-translate="news.readMore">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All News Button -->
+            <div class="news-view-all">
+                <a href="#" class="view-all-btn">
+                    <span data-translate="news.viewAll">View All News</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="contact.title">Contact Us</h2>
+                <div class="underline"></div>
+                <p data-translate="contact.subtitle">Get in touch with us for any inquiries</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <!-- Facebook Page Section -->
+                    <div class="info-item" style="width: 100%; margin-bottom: 30px;">
+                        <div class="info-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Follow Us on Facebook</h4>
+                            <div class="facebook-container" style="margin-top: 15px; max-width: 500px;">
+                                <!-- Facebook Page Plugin -->
+                                <div id="fb-root"></div>
+                                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+                                <div class="fb-page" 
+                                     data-href="https://www.facebook.com/aclghtota/" 
+                                     data-tabs="timeline" 
+                                     data-width="500" 
+                                     data-height="400" 
+                                     data-small-header="false" 
+                                     data-adapt-container-width="true" 
+                                     data-hide-cover="false" 
+                                     data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/aclghtota/" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/aclghtota/">ACLG Hambantota on Facebook</a>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4 data-translate="contact.address">Address</h4>
+                            <p data-translate="contact.addressText">Assistant Commissioner of Local Government Office<br>Hambantota, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4 data-translate="contact.phone">Phone</h4>
+                            <p>+94 47 222 0456</p>
+                            <p style="font-size: 0.9em; opacity: 0.9;">Fax: +94 47 222 0457</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4 data-translate="contact.email">Email</h4>
+                            <p>aclg.hambantota@lgov.lk</p>
+                            <p style="font-size: 0.9em; opacity: 0.9;">info@aclg-hambantota.gov.lk</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4 data-translate="contact.officeHours">Office Hours</h4>
+                            <p data-translate="contact.officeHoursText">Monday - Friday: 8:30 AM - 4:15 PM</p>
+                            <p style="font-size: 0.9em; opacity: 0.9;" data-translate="contact.lunchBreak">Lunch: 12:30 PM - 1:00 PM</p>
+                            <p style="font-size: 0.9em; opacity: 0.9; margin-top: 5px;" data-translate="contact.holidays">Closed on Public Holidays</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" data-translate="contact.formName" placeholder="Your Name" required minlength="2">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" data-translate="contact.formEmail" placeholder="Your Email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" data-translate="contact.formSubject" placeholder="Subject" required minlength="3">
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" data-translate="contact.formMessage" placeholder="Your Message" rows="5" required minlength="10"></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text" data-translate="contact.sendBtn">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> <span data-translate="contact.sending">Sending...</span>
+                            </span>
+                        </button>
+                        <div class="form-success" id="formSuccess" style="display: none;">
+                            <i class="fas fa-check-circle"></i> <span data-translate="contact.successMsg">Thank you! Your message has been sent successfully.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h4 data-translate="chatbot.title">ACLG Assistant</h4>
+                    <span class="chatbot-status" data-translate="chatbot.online">Online</span>
+                </div>
+            </div>
+            <div class="chatbot-header-actions">
+                <button class="chatbot-minimize" id="chatbotMinimize" title="Minimize">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="chatbot-close" id="chatbotClose" title="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="chat-message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p data-translate="chatbot.welcome">Hello! I'm ACLG Assistant. How can I help you today?</p>
+                    <span class="message-time"></span>
+                </div>
+            </div>
+            
+            <!-- Quick Buttons -->
+            <div class="quick-buttons" id="quickButtons">
+                <button class="quick-btn" data-question="departments" data-translate="chatbot.quick.departments">Our Departments</button>
+                <button class="quick-btn" data-question="contact" data-translate="chatbot.quick.contact">Contact Info</button>
+                <button class="quick-btn" data-question="hours" data-translate="chatbot.quick.hours">Office Hours</button>
+                <button class="quick-btn" data-question="downloads" data-translate="chatbot.quick.downloads">Downloads</button>
+            </div>
+        </div>
+        
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                class="chatbot-input" 
+                id="chatbotInput" 
+                data-translate="chatbot.inputPlaceholder"
+                placeholder="Type your message..."
+                autocomplete="off"
+            >
+            <button class="chatbot-send" id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" id="chatbotToggle" title="Chat with us">
+        <i class="fas fa-comments"></i>
+        <span class="chatbot-badge" data-translate="chatbot.new">New</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ACLG Hambantota</h3>
+                    <p data-translate="footer.description">Assistant Commissioner of Local Government Office committed to serving the community with excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer.quickLinks">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" data-translate="nav.home">Home</a></li>
+                        <li><a href="#about" data-translate="nav.about">About Us</a></li>
+                        <li><a href="#departments" data-translate="nav.departments">Departments</a></li>
+                        <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="nav.departments">Departments</h3>
+                    <ul>
+                        <li><a href="account.html" data-translate="departments.account">Account</a></li>
+                        <li><a href="establishment.html" data-translate="departments.establishment">Establishment</a></li>
+                        <li><a href="development.html" data-translate="departments.development">Development</a></li>
+                        <li><a href="investigation.html" data-translate="departments.investigation">Investigation</a></li>
+                        <li><a href="engineering.html" data-translate="departments.engineering">Engineering</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span data-translate="footer.copyright">Assistant Commissioner of Local Government Office - Hambantota. All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
