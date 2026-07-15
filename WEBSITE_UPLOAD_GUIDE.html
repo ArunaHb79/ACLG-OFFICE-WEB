@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Website Upload Guide - Step by Step</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #0066cc;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        .date {
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        .table-of-contents {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-left: 4px solid #0066cc;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .table-of-contents h2 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+        .table-of-contents ul {
+            list-style-position: inside;
+        }
+        .table-of-contents li {
+            margin: 8px 0;
+        }
+        .table-of-contents a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .table-of-contents a:hover {
+            text-decoration: underline;
+        }
+        .method {
+            page-break-inside: avoid;
+            margin-bottom: 40px;
+            border: 1px solid #ddd;
+            padding: 25px;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+        .method h2 {
+            color: #0066cc;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0066cc;
+        }
+        .method h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .step {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #0066cc;
+            border-radius: 3px;
+        }
+        .step h4 {
+            color: #0066cc;
+            margin-bottom: 8px;
+        }
+        .code-block {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+        .code-block span {
+            display: block;
+        }
+        .cmd {
+            color: #66d9ef;
+        }
+        .folder {
+            color: #a1efe4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: white;
+        }
+        table th {
+            background-color: #0066cc;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+        .warning strong {
+            color: #856404;
+        }
+        .success {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+        .success strong {
+            color: #155724;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+        .info strong {
+            color: #0c5460;
+        }
+        .checklist {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .checklist label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        .checklist input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        ul, ol {
+            margin: 10px 0 10px 20px;
+        }
+        li {
+            margin: 6px 0;
+        }
+        .comparison-table {
+            width: 100%;
+            margin: 20px 0;
+        }
+        .comparison-table th, .comparison-table td {
+            text-align: center;
+            padding: 12px;
+        }
+        .comparison-table th:first-child, .comparison-table td:first-child {
+            text-align: left;
+        }
+        .stars {
+            color: #ffc107;
+            font-size: 1.2em;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .method {
+                page-break-inside: avoid;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📱 Complete Website Upload Guide</h1>
+            <p>Step-by-Step Instructions for Hosting Your Website Online</p>
+        </header>
+        
+        <div class="date">
+            <p>Generated: July 10, 2026</p>
+            <p>Version: 1.0</p>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="table-of-contents">
+            <h2>📋 Table of Contents</h2>
+            <ul>
+                <li><a href="#method1">Method 1: cPanel File Manager (Easiest)</a></li>
+                <li><a href="#method2">Method 2: FTP Client - FileZilla (Best for Large Sites)</a></li>
+                <li><a href="#method3">Method 3: Git + Command Line (Professional)</a></li>
+                <li><a href="#method4">Method 4: Hosting Control Panels</a></li>
+                <li><a href="#comparison">Quick Comparison</a></li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+            </ul>
+        </div>
+
+        <!-- METHOD 1 -->
+        <div class="method" id="method1">
+            <h2>METHOD 1: cPANEL FILE MANAGER (Easiest - No Software Needed)</h2>
+            
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>Hosting account with cPanel access</li>
+                <li>Your domain and hosting activated</li>
+                <li>Web browser (Chrome, Firefox, Edge)</li>
+            </ul>
+
+            <div class="step">
+                <h4>Step 1: Access Your cPanel</h4>
+                <p><strong>1.1 Find Your cPanel Login Link</strong></p>
+                <ul>
+                    <li>Check the email from your hosting provider</li>
+                    <li>Look for: <code>cPanel URL: yourdomain.com:2083</code></li>
+                    <li>Write down your username and password</li>
+                </ul>
+                <p><strong>1.2 Login to cPanel</strong></p>
+                <ul>
+                    <li>Open your browser</li>
+                    <li>Type in address bar: <code>yourdomain.com:2083</code></li>
+                    <li>Or use: <code>https://yourdomain.com/cpanel</code></li>
+                    <li>Enter username and password</li>
+                    <li>Click "Log In"</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Open File Manager</h4>
+                <p><strong>2.1 Click File Manager</strong></p>
+                <ul>
+                    <li>Look for "File Manager" icon in cPanel</li>
+                    <li>Click it</li>
+                    <li>A window opens showing server folders</li>
+                </ul>
+                <p><strong>2.2 Navigate to public_html</strong></p>
+                <ul>
+                    <li>On the left side, find folder list</li>
+                    <li>Click on <strong>"public_html"</strong></li>
+                    <li>This is where all website files go</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Upload Your Files</h4>
+                <p><strong>Method A: Upload Individual Files</strong></p>
+                <ol>
+                    <li>In File Manager, click the <strong>"Upload"</strong> button</li>
+                    <li>Select files from: <code>C:\xampp\htdocs\web</code></li>
+                    <li>Select each file and click "Open"</li>
+                    <li>Repeat for all files</li>
+                </ol>
+                <p><strong>Method B: Drag and Drop (Easiest)</strong></p>
+                <ol>
+                    <li>Open File Manager in one window (showing public_html)</li>
+                    <li>Open Windows File Explorer in another window</li>
+                    <li>Navigate to: <code>C:\xampp\htdocs\web</code></li>
+                    <li>Drag files from Explorer → File Manager window</li>
+                    <li>Files upload automatically</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Set File Permissions</h4>
+                <p><strong>For Folders:</strong></p>
+                <ol>
+                    <li>Find your <strong>images</strong> folder</li>
+                    <li>Right-click on it</li>
+                    <li>Click "Change Permissions"</li>
+                    <li>Set to: <strong>755</strong></li>
+                    <li>Click "Change"</li>
+                </ol>
+                <p><strong>For PHP Files:</strong></p>
+                <ol>
+                    <li>Right-click <strong>send_contact.php</strong></li>
+                    <li>Click "Change Permissions"</li>
+                    <li>Set to: <strong>644</strong></li>
+                    <li>Click "Change"</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h4>Step 5: Test Your Website</h4>
+                <ol>
+                    <li>Open browser</li>
+                    <li>Type: <code>https://yourdomain.com</code></li>
+                    <li>Your website should load</li>
+                    <li>Test all links and features</li>
+                </ol>
+            </div>
+
+            <div class="success">
+                <strong>✓ Success!</strong> Your website is now live using cPanel method.
+            </div>
+        </div>
+
+        <!-- METHOD 2 -->
+        <div class="method" id="method2">
+            <h2>METHOD 2: FTP CLIENT - FileZilla (Best for Large Sites)</h2>
+            
+            <h3>Why Use FTP?</h3>
+            <ul>
+                <li>✓ Faster uploads</li>
+                <li>✓ Better for lots of files</li>
+                <li>✓ Resume interrupted uploads</li>
+                <li>✓ Drag-and-drop interface</li>
+                <li>✓ Works on all hosting</li>
+            </ul>
+
+            <div class="step">
+                <h4>Step 1: Download and Install FileZilla</h4>
+                <p><strong>1.1 Get FileZilla</strong></p>
+                <ul>
+                    <li>Go to: <code>https://filezilla-project.org/</code></li>
+                    <li>Click "Download FileZilla Client"</li>
+                    <li>Choose Windows (usually 64-bit)</li>
+                    <li>Click download link</li>
+                </ul>
+                <p><strong>1.2 Install FileZilla</strong></p>
+                <ul>
+                    <li>Open downloaded file: <code>FileZilla_X.XX.X_win64.exe</code></li>
+                    <li>Click "Next" → "Next" → "Install"</li>
+                    <li>Click "Finish"</li>
+                    <li>FileZilla opens</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Get FTP Credentials</h4>
+                <p><strong>2.1 Check Your Hosting Email</strong></p>
+                <p>Look for email from hosting provider containing:</p>
+                <div class="code-block">
+                    <span>FTP Host: ftp.yourdomain.com</span>
+                    <span>Username: your_ftp_username</span>
+                    <span>Password: your_ftp_password</span>
+                    <span>Port: 21</span>
+                </div>
+                <p><strong>2.2 Find in Hosting Control Panel</strong></p>
+                <ul>
+                    <li>Login to hosting account</li>
+                    <li>Look for "FTP Accounts" or "FTP Manager"</li>
+                    <li>Click it</li>
+                    <li>Write down the FTP details</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Add FTP Connection in FileZilla</h4>
+                <p><strong>3.1 Open Site Manager</strong></p>
+                <ul>
+                    <li>In FileZilla, go to: <strong>File</strong> → <strong>Site Manager</strong></li>
+                    <li>Or press: <strong>Ctrl+S</strong></li>
+                </ul>
+                <p><strong>3.2 Create New Site</strong></p>
+                <ul>
+                    <li>Click "New Site"</li>
+                    <li>Name it: <code>MyWebsite</code></li>
+                </ul>
+                <p><strong>3.3 Enter FTP Details</strong></p>
+                <div class="code-block">
+                    <span>Protocol: FTP - File Transfer Protocol</span>
+                    <span>Host: ftp.yourdomain.com</span>
+                    <span>Port: 21</span>
+                    <span>User: your_ftp_username</span>
+                    <span>Password: your_ftp_password</span>
+                </div>
+                <p><strong>3.4 Click "Connect"</strong></p>
+                <ul>
+                    <li>FileZilla connects to your server</li>
+                    <li>Wait 5-10 seconds</li>
+                    <li>You should see: "Status: Connected"</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Navigate to public_html</h4>
+                <p><strong>4.1 After Connection</strong></p>
+                <ul>
+                    <li>Look at RIGHT SIDE (Remote)</li>
+                    <li>You might see: /home, /public_html</li>
+                    <li>Double-click on <strong>public_html</strong></li>
+                    <li>Now in your website folder</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 5: Prepare Local Folder</h4>
+                <p><strong>5.1 Navigate on Your Computer</strong></p>
+                <ul>
+                    <li>Look at LEFT SIDE (Local)</li>
+                    <li>Navigate to: <code>C:\xampp\htdocs\web</code></li>
+                    <li>You should see all website files</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 6: Upload Files</h4>
+                <p><strong>Method A: Drag and Drop (Easiest)</strong></p>
+                <ol>
+                    <li>On LEFT side: Select all files (Ctrl+A)</li>
+                    <li>Drag them to RIGHT side (server)</li>
+                    <li>Watch progress bar</li>
+                    <li>Wait for 100% completion</li>
+                </ol>
+                <p><strong>Method B: Right-Click Upload</strong></p>
+                <ol>
+                    <li>Select files on LEFT side</li>
+                    <li>Right-click → "Upload"</li>
+                    <li>Files upload automatically</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h4>Step 7: Set Permissions</h4>
+                <p><strong>7.1 Set Folder Permissions to 755</strong></p>
+                <ol>
+                    <li>Right-click folder on RIGHT side (e.g., images)</li>
+                    <li>Click "File permissions"</li>
+                    <li>Enter: <strong>755</strong></li>
+                    <li>Click OK</li>
+                </ol>
+                <p><strong>7.2 Set File Permissions to 644</strong></p>
+                <ol>
+                    <li>Right-click send_contact.php</li>
+                    <li>Click "File permissions"</li>
+                    <li>Enter: <strong>644</strong></li>
+                    <li>Click OK</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h4>Step 8: Verify Upload</h4>
+                <ol>
+                    <li>Check RIGHT side for all files</li>
+                    <li>Open browser</li>
+                    <li>Type: <code>https://yourdomain.com</code></li>
+                    <li>Website should load</li>
+                </ol>
+            </div>
+
+            <div class="success">
+                <strong>✓ Success!</strong> Your website is now live using FTP method.
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- METHOD 3 -->
+        <div class="method" id="method3">
+            <h2>METHOD 3: GIT + COMMAND LINE (Professional Approach)</h2>
+            
+            <h3>Why Use Git?</h3>
+            <ul>
+                <li>✓ Version control (track changes)</li>
+                <li>✓ Easy updates later</li>
+                <li>✓ Collaborate with team</li>
+                <li>✓ Backup your code</li>
+                <li>✓ Professional workflow</li>
+            </ul>
+
+            <div class="step">
+                <h4>Step 1: Install Git</h4>
+                <p><strong>1.1 Download Git</strong></p>
+                <ul>
+                    <li>Go to: <code>https://git-scm.com/download/win</code></li>
+                    <li>Click download (usually Git-X.XX.X-64-bit.exe)</li>
+                    <li>Open the downloaded file</li>
+                </ul>
+                <p><strong>1.2 Install Git</strong></p>
+                <ul>
+                    <li>Click "Next" through installation</li>
+                    <li>Choose options (defaults are fine)</li>
+                    <li>Click "Finish"</li>
+                </ul>
+                <p><strong>1.3 Verify Installation</strong></p>
+                <ul>
+                    <li>Open PowerShell</li>
+                    <li>Type: <code>git --version</code></li>
+                    <li>Should show: <code>git version 2.XX.X</code></li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Create GitHub Account (Free)</h4>
+                <p><strong>2.1 Sign Up</strong></p>
+                <ul>
+                    <li>Go to: <code>https://github.com</code></li>
+                    <li>Click "Sign up"</li>
+                    <li>Create account with email and password</li>
+                </ul>
+                <p><strong>2.2 Create Personal Access Token</strong></p>
+                <ol>
+                    <li>Login to GitHub</li>
+                    <li>Click profile icon (top-right)</li>
+                    <li>Go to: Settings → Developer settings → Personal access tokens</li>
+                    <li>Click "Generate new token"</li>
+                    <li>Name it: <code>my-deployment</code></li>
+                    <li>Check: <code>repo</code> (full control)</li>
+                    <li>Click "Generate token"</li>
+                    <li><strong>COPY the token</strong> (save it somewhere safe)</li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Create Repository on GitHub</h4>
+                <p><strong>3.1 Create New Repo</strong></p>
+                <ol>
+                    <li>Login to GitHub</li>
+                    <li>Click "+" icon (top-right)</li>
+                    <li>Click "New repository"</li>
+                    <li>Fill in:
+                        <ul>
+                            <li>Repository name: <code>my-website</code></li>
+                            <li>Description: <code>My company website</code></li>
+                            <li>Public/Private: Public</li>
+                            <li>Leave other options unchecked</li>
+                        </ul>
+                    </li>
+                    <li>Click "Create repository"</li>
+                </ol>
+                <p><strong>3.2 Copy Repository URL</strong></p>
+                <ul>
+                    <li>You'll see: <code>https://github.com/yourusername/my-website.git</code></li>
+                    <li>Copy this URL (you'll need it)</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Initialize Git Repository</h4>
+                <p><strong>4.1 Open PowerShell</strong></p>
+                <ul>
+                    <li>Right-click on desktop</li>
+                    <li>Choose "Open PowerShell here"</li>
+                    <li>Or: Open PowerShell and type: <code>cd C:\xampp\htdocs\web</code></li>
+                </ul>
+                <p><strong>4.2 Initialize Git</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git init</span>
+                </div>
+                <p><strong>4.3 Configure Git (First Time Only)</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git config --global user.name "Your Name"</span>
+                    <span class="cmd">git config --global user.email "your-email@gmail.com"</span>
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 5: Add Your Files</h4>
+                <p><strong>5.1 Add All Files</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git add .</span>
+                </div>
+                <p><strong>5.2 Check Status</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git status</span>
+                </div>
+                <p><strong>5.3 Create First Commit</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git commit -m "Initial upload - website files"</span>
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 6: Connect to GitHub</h4>
+                <p><strong>6.1 Add Remote Repository</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git remote add origin https://github.com/yourusername/my-website.git</span>
+                </div>
+                <p><strong>6.2 Verify Connection</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git remote -v</span>
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 7: Push to GitHub</h4>
+                <div class="code-block">
+                    <span class="cmd">git branch -M main</span>
+                    <span class="cmd">git push -u origin main</span>
+                </div>
+                <p>When prompted:</p>
+                <ul>
+                    <li><strong>Username:</strong> Your GitHub username</li>
+                    <li><strong>Password:</strong> The Personal Access Token you created</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 8: Deploy to Hosting Server</h4>
+                <p><strong>8.1 Connect via SSH</strong></p>
+                <div class="code-block">
+                    <span class="cmd">ssh username@your-hosting-server.com</span>
+                </div>
+                <p><strong>8.2 Navigate to public_html</strong></p>
+                <div class="code-block">
+                    <span class="cmd">cd public_html</span>
+                </div>
+                <p><strong>8.3 Clone Your Repository</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git clone https://github.com/yourusername/my-website.git .</span>
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 9: Update Your Website Later</h4>
+                <p><strong>On Your Computer:</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git add .</span>
+                    <span class="cmd">git commit -m "Updated homepage"</span>
+                    <span class="cmd">git push</span>
+                </div>
+                <p><strong>On Your Hosting Server (via SSH):</strong></p>
+                <div class="code-block">
+                    <span class="cmd">git pull</span>
+                </div>
+            </div>
+
+            <div class="success">
+                <strong>✓ Success!</strong> Your website is now live using Git method.
+            </div>
+        </div>
+
+        <!-- METHOD 4 -->
+        <div class="method" id="method4">
+            <h2>METHOD 4: SPECIFIC HOSTING CONTROL PANELS</h2>
+            
+            <h3>HOSTINGER (Most Popular)</h3>
+            <div class="step">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Login to: <code>https://hpanel.hostinger.com</code></li>
+                    <li>Click: Hosting → File Manager</li>
+                    <li>Navigate to: <code>public_html</code></li>
+                    <li>Click: Upload button</li>
+                    <li>Select files from <code>C:\xampp\htdocs\web</code></li>
+                    <li>Wait for upload to complete</li>
+                    <li>Set permissions (755 for folders, 644 for files)</li>
+                    <li>Visit: <code>https://yourdomain.com</code></li>
+                </ol>
+            </div>
+
+            <h3>BLUEHOST</h3>
+            <div class="step">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Login to: <code>https://www.bluehost.com/account/</code></li>
+                    <li>Click: Hosting tab → File Manager</li>
+                    <li>Navigate to: <code>public_html</code></li>
+                    <li>Click: Upload button</li>
+                    <li>Select files from <code>C:\xampp\htdocs\web</code></li>
+                    <li>Wait for completion</li>
+                    <li>Set permissions (755 for folders, 644 for files)</li>
+                    <li>Visit: <code>https://yourdomain.com</code></li>
+                </ol>
+            </div>
+
+            <h3>SITEGROUND</h3>
+            <div class="step">
+                <h4>Steps:</h4>
+                <ol>
+                    <li>Login to: <code>https://www.siteground.com/login</code></li>
+                    <li>Click: Site Tools → File Manager</li>
+                    <li>Navigate to: <code>public_html</code></li>
+                    <li>Click: Upload button</li>
+                    <li>Select your website files</li>
+                    <li>Set permissions (755 for folders, 644 for files)</li>
+                    <li>Visit: <code>https://yourdomain.com</code></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- COMPARISON TABLE -->
+        <div class="method" id="comparison">
+            <h2>QUICK COMPARISON</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Difficulty</th>
+                        <th>Speed</th>
+                        <th>Best For</th>
+                        <th>Software Needed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>cPanel</strong></td>
+                        <td><span class="stars">⭐</span> Easy</td>
+                        <td>Slow</td>
+                        <td>Beginners</td>
+                        <td>None (browser only)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FTP</strong></td>
+                        <td><span class="stars">⭐⭐</span> Medium</td>
+                        <td>Fast</td>
+                        <td>Most sites</td>
+                        <td>FileZilla (free)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Git</strong></td>
+                        <td><span class="stars">⭐⭐⭐</span> Hard</td>
+                        <td>Medium</td>
+                        <td>Teams/Professionals</td>
+                        <td>Git (free)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control Panel</strong></td>
+                        <td><span class="stars">⭐</span> Easy</td>
+                        <td>Slow</td>
+                        <td>Your specific host</td>
+                        <td>None (browser only)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TROUBLESHOOTING -->
+        <div class="method" id="troubleshooting">
+            <h2>TROUBLESHOOTING</h2>
+
+            <div class="warning">
+                <strong>❌ Website Won't Load</strong>
+                <ul>
+                    <li>✓ Check if files are in public_html</li>
+                    <li>✓ Verify permissions are set correctly</li>
+                    <li>✓ Check domain is connected to hosting</li>
+                    <li>✓ Wait 24-48 hours for DNS propagation</li>
+                    <li>✓ Clear browser cache (Ctrl+Shift+Delete)</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <strong>❌ Contact Form Not Working</strong>
+                <ul>
+                    <li>✓ Update send_contact.php with SMTP settings</li>
+                    <li>✓ Verify email credentials are correct</li>
+                    <li>✓ Test with simple email first</li>
+                    <li>✓ Check email spam folder</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <strong>❌ Permission Errors</strong>
+                <ul>
+                    <li>✓ Folders must be 755</li>
+                    <li>✓ Files must be 644</li>
+                    <li>✓ Re-check in File Manager</li>
+                    <li>✓ Use "Recursive" option for all subfolders</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <strong>❌ Upload Stuck</strong>
+                <ul>
+                    <li>✓ Check internet connection</li>
+                    <li>✓ Try uploading fewer files at once</li>
+                    <li>✓ Use FTP instead of cPanel</li>
+                    <li>✓ Restart your router</li>
+                    <li>✓ Try different browser</li>
+                </ul>
+            </div>
+
+            <div class="info">
+                <strong>ℹ️ Files Not Showing</strong>
+                <ul>
+                    <li>✓ Refresh the File Manager (F5)</li>
+                    <li>✓ Check if upload actually completed</li>
+                    <li>✓ Look in different folders</li>
+                    <li>✓ Check your internet didn't disconnect</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRE-DEPLOYMENT CHECKLIST -->
+        <div class="method">
+            <h2>PRE-DEPLOYMENT CHECKLIST</h2>
+            <div class="checklist">
+                <label><input type="checkbox"> All HTML files prepared (index.html, account.html, etc.)</label>
+                <label><input type="checkbox"> CSS file (style.css) ready</label>
+                <label><input type="checkbox"> JavaScript files (script.js, translations.js) ready</label>
+                <label><input type="checkbox"> Images folder organized</label>
+                <label><input type="checkbox"> PHP files updated with correct settings</label>
+                <label><input type="checkbox"> Email configuration tested locally</label>
+                <label><input type="checkbox"> Domain registered</label>
+                <label><input type="checkbox"> Hosting account activated</label>
+                <label><input type="checkbox"> FTP or cPanel credentials obtained</label>
+                <label><input type="checkbox"> Upload method chosen</label>
+                <label><input type="checkbox"> Backup of local files created</label>
+                <label><input type="checkbox"> Ready to upload</label>
+            </div>
+        </div>
+
+        <!-- RECOMMENDATIONS -->
+        <div class="method">
+            <h2>RECOMMENDATIONS FOR BEGINNERS</h2>
+            <div class="success">
+                <strong>✓ Easiest Path:</strong>
+                <ol>
+                    <li>Use Hostinger or Bluehost for hosting</li>
+                    <li>Use Method 1 (cPanel) for upload</li>
+                    <li>Configure SMTP for email</li>
+                    <li>Test everything thoroughly</li>
+                </ol>
+            </div>
+
+            <div class="info">
+                <strong>ℹ️ For Email Configuration:</strong>
+                <ul>
+                    <li>Use Gmail (generate app password)</li>
+                    <li>Or use Mailgun (free tier available)</li>
+                    <li>Or use SendGrid (free tier available)</li>
+                </ul>
+            </div>
+
+            <div class="info">
+                <strong>ℹ️ For AI Chatbot:</strong>
+                <ul>
+                    <li>Use Gemini (free - best option)</li>
+                    <li>Or use OpenAI (paid - better quality)</li>
+                    <li>Or keep rule-based (no cost)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- IMPORTANT NOTES -->
+        <div class="warning">
+            <h3>⚠️ IMPORTANT NOTES</h3>
+            <ul>
+                <li><strong>Backup First:</strong> Always backup your files before uploading</li>
+                <li><strong>Test Locally:</strong> Test website locally before deployment</li>
+                <li><strong>SSL Certificate:</strong> Enable HTTPS/SSL for security</li>
+                <li><strong>DNS Propagation:</strong> Domain activation may take 24-48 hours</li>
+                <li><strong>File Permissions:</strong> Incorrect permissions cause 403 errors</li>
+                <li><strong>PHP Version:</strong> Check hosting PHP version compatibility</li>
+                <li><strong>Database:</strong> If using database, create it in hosting panel first</li>
+                <li><strong>Support:</strong> Contact hosting support if issues arise</li>
+            </ul>
+        </div>
+
+        <!-- FILE STRUCTURE GUIDE -->
+        <div class="method">
+            <h2>YOUR FILE STRUCTURE</h2>
+            <p>Before upload, your local files should be organized as:</p>
+            <div class="code-block">
+                <span class="folder">C:\xampp\htdocs\web\</span>
+                <span>├── index.html</span>
+                <span>├── account.html</span>
+                <span>├── development.html</span>
+                <span>├── downloads.html</span>
+                <span>├── engineering.html</span>
+                <span>├── establishment.html</span>
+                <span>├── home.html</span>
+                <span>├── 404.html</span>
+                <span>├── style.css</span>
+                <span>├── script.js</span>
+                <span>├── translations.js</span>
+                <span>├── send_contact.php</span>
+                <span>├── <span class="folder">images/</span></span>
+                <span>│   ├── logo.png</span>
+                <span>│   └── [other images]</span>
+                <span>└── <span class="folder">PHPMailer-master/</span></span>
+                <span>    ├── src/</span>
+                <span>    └── language/</span>
+            </div>
+            <p>After upload, the same structure should be in your hosting public_html folder.</p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>&copy; 2026 Website Upload Guide. All rights reserved.</p>
+            <p>Last updated: July 10, 2026</p>
+            <p>For questions or issues, contact your hosting provider's support team.</p>
+        </div>
+    </div>
+</body>
+</html>
