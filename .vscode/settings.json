@@ -1,0 +1,14 @@
+{
+  "files.exclude": {
+    "PHPMailer-master": true,
+    "PHPMailer": true
+  },
+  "search.exclude": {
+    "PHPMailer-master": true,
+    "PHPMailer": true
+  },
+  "files.watcherExclude": {
+    "PHPMailer-master/**": true,
+    "PHPMailer/**": true
+  }
+}

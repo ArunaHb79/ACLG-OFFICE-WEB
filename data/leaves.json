@@ -1,0 +1,11 @@
+[
+    {
+        "id": "LV001",
+        "staff_id": "ST001",
+        "leave_type": "Casual",
+        "start_date": "2026-07-20",
+        "end_date": "2026-07-21",
+        "reason": "\u0da7\u0db1\u0da7\u0db1\u0da7\u0da7\u0db1\u0da7",
+        "status": "Pending"
+    }
+]
