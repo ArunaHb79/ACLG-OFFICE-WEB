@@ -276,7 +276,7 @@ const translations = {
         // Departments - Sinhala
         departments: {
             account: "ගිණුම්",
-            establishment: "ආයතනය",
+            establishment: "ආයතන",
             development: "සංවර්ධන",
             investigation: "විමර්ශන",
             engineering: "ඉංජිනේරු"
